@@ -226,10 +226,10 @@
 
   </g>
 
-  <!-- Hi, I'm Sigrid Jin -->
+  <!-- Hi, I'm Magdeline Ng -->
   <g transform="translate(10, 0)" class="msg-1 bubble">
     <rect width="159" height="42" rx="18.0355" />
-    <text x="15" y="27">Hi, I'm Sigrid Jin</text>
+    <text x="15" y="27">Hi, I'm Magdeline Ng</text>
   </g>
 
   <!-- typing 2 -->
@@ -250,10 +250,10 @@
 
   </g>
 
-  <!-- From Columbus... -->
+  <!-- From Singapore... -->
   <g transform="translate(10, 48)" class="msg-2">
     <rect width="425" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">I am from Seoul, Korea where it’s supposed to be</text>
+    <text x="15" y="27">I am from Singapore where it’s supposed to be</text>
     <text x="15" y="50">77° F (25° C) and <tspan class="emoji">☁️</tspan> today.</text>
   </g>
 
@@ -278,8 +278,8 @@
   <!-- Work ... -->
   <g transform="translate(10, 120)" class="msg-3">
     <rect width="459" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">I’m eager to challenge new things!</text>
-    <text x="15" y="50">Now extensively learning ZK and LLM fields.</text>
+    <text x="15" y="27">I’m a Final Year undergraduate studying Computer Science and Business at NTU,</text>
+    <text x="15" y="50">and I'm currently exploring Web Development and Cloud</text>
   </g>
 
   <!-- typing 4 -->
@@ -300,12 +300,12 @@
 
   </g>
 
-  <!-- Twitter -->
+  <!-- LinkedIn -->
   <g transform="translate(10, 192)" class="msg-4">
     <rect width="415" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
       Find me on
-      <a xlink:href="https://twitter.com/sigridjin_eth">https://twitter.com/sigridjin_eth</a>
+      <a xlink:href="https://www.linkedin.com/in/magdeline-ng/">https://www.linkedin.com/in/magdeline-ng/</a>
     </text>
   </g>
 
