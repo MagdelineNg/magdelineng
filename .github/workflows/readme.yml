@@ -14,7 +14,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
       - run: npm install
 
       - name: Generate readme
@@ -25,7 +25,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          author_name: Magdeline
+          author_name: MagdelineNg
           author_email: magdelinenxl@gmail.com
           message: "Auto updating my readme"
           add: "*.svg"
