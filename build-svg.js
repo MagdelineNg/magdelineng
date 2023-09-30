@@ -59,28 +59,30 @@ fetch(url)
     const degF = Math.round(data.list[0].main.temp)
     const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
     const icon = data.list[0].weather[0].icon
+
+    fs.readFile('template.svg', 'utf-8', (error, data) => {
+        if (error) {
+        console.error(error)
+        return
+        }
+    
+        data = data.replace('{degF}', degF)
+        data = data.replace('{degC}', degC)
+        data = data.replace('{weatherEmoji}', emojis[icon])
+        data = data.replace('{psTime}', psTime)
+        data = data.replace('{todayDay}', todayDay)
+    
+        data = fs.writeFile('chat.svg', data, (err) => {
+        if (err) {
+        console.error(err)
+        return
+        }
+        })
+    })
   })
     .catch(console.err);
 
-fs.readFile('template.svg', 'utf-8', (error, data) => {
-    if (error) {
-    console.error(error)
-    return
-    }
 
-    data = data.replace('{degF}', degF)
-    data = data.replace('{degC}', degC)
-    data = data.replace('{weatherEmoji}', emojis[icon])
-    data = data.replace('{psTime}', psTime)
-    data = data.replace('{todayDay}', todayDay)
-
-    data = fs.writeFile('chat.svg', data, (err) => {
-    if (err) {
-    console.error(err)
-    return
-    }
-    })
-})
 
 // weather.getWeatherOneCall(function (err, data) {
 //     if (err) console.log(`err: ${err}`)
