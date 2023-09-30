@@ -65,18 +65,18 @@ fetch(url)
         addSuffix: false,
         })
     
-        // data = data.replace('{degF}', degF)
-        // data = data.replace('{degC}', degC)
-        // data = data.replace('{weatherEmoji}', emojis[icon])
-        // data = data.replace('{psTime}', psTime)
-        // data = data.replace('{todayDay}', todayDay)
+        data = data.replace('{degF}', degF)
+        data = data.replace('{degC}', degC)
+        data = data.replace('{weatherEmoji}', emojis[icon])
+        data = data.replace('{psTime}', psTime)
+        data = data.replace('{todayDay}', todayDay)
     
-        // fs.writeFile('chat.svg', data, (err) => {
-        //   if (err) {
-        //     console.error(err)
-        //     return
-        //   }
-        // })
+        fs.writeFile('chat.svg', data, (err) => {
+          if (err) {
+            console.error(err)
+            return
+          }
+        })
     })
   })
     .catch(console.err);
