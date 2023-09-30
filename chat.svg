@@ -297,7 +297,8 @@
     <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
       <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
     </circle>
-
+  </g>
+  
   <!-- Exploring ... -->
   <g transform="translate(10, 120)" class="msg-3">
     <rect width="300" height="66.1302" rx="18.0355" class="bubble" />
