@@ -4,6 +4,9 @@ let fs = require('fs')
 // let got = require('got')
 let qty = require('js-quantities')   
 let formatDistance = require('date-fns/formatDistance')
+let weather = require('openweather-apis')
+
+let WEATHER_DOMAIN = 'http://dataservice.accuweather.com'
 
 const emojis = {
     '01d': '☀️',
@@ -41,75 +44,39 @@ const psTime = formatDistance(new Date(2020, 12, 14), today, {
   addSuffix: false,
 })
 
-let lat = '1.321'
-let lon = '103.8198'
-let lang = 'en';
-let units = 'metric';
-let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=${units}&lang=${lang}`;
+// Today's weather
+weather.setLang('en')
+weather.setCoordinate(1.3521, 103.8198)
+weather.setUnits('imperial')
+weather.setAPPID(WEATHER_API_KEY)
 
-//fetch the weather
-fetch(url)
-.then((response) => {
-    if (!response.ok) {
-      throw new Error('Network response failed.');
-    }
-    return response.json();
-  })
-  .then((data) => {
-    const degF = Math.round(data.list[0].main.temp)
+weather.getWeatherOneCall(function (err, data) {
+    if (err) console.log(err)
+  
+    const degF = Math.round(data.daily[0].temp.max)
     const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
-    const icon = data.list[0].weather[0].icon
-  })
-    .catch(console.err);
-
-fs.readFile('template.svg', 'utf-8', (error, data) => {
-    if (error) {
-    console.error(error)
-    return
-    }
-
-    data = data.replace('{degF}', degF)
-    data = data.replace('{degC}', degC)
-    data = data.replace('{weatherEmoji}', emojis[icon])
-    data = data.replace('{psTime}', psTime)
-    data = data.replace('{todayDay}', todayDay)
-
-    data = fs.writeFile('chat.svg', data, (err) => {
-    if (err) {
-    console.error(err)
-    return
-    }
+    const icon = data.daily[0].weather[0].icon
+  
+    fs.readFile('template.svg', 'utf-8', (error, data) => {
+      if (error) {
+        console.error(error)
+        return
+      }
+  
+      data = data.replace('{degF}', degF)
+      data = data.replace('{degC}', degC)
+      data = data.replace('{weatherEmoji}', emojis[icon])
+      data = data.replace('{psTime}', psTime)
+      data = data.replace('{todayDay}', todayDay)
+  
+      data = fs.writeFile('chat.svg', data, (err) => {
+        if (err) {
+          console.error(err)
+          return
+        }
+      })
     })
-})
-
-// weather.getWeatherOneCall(function (err, data) {
-//     if (err) console.log(`err: ${err}`)
-    
-//     console.log("data: ", data)
-//     const degF = Math.round(data.daily[0].temp.max)
-//     const degC = Math.round(qty(`${degF} tempF`).to('tempC').scalar)
-//     const icon = data.daily[0].weather[0].icon
-  
-//     fs.readFile('template.svg', 'utf-8', (error, data) => {
-//       if (error) {
-//         console.error(error)
-//         return
-//       }
-  
-//       data = data.replace('{degF}', degF)
-//       data = data.replace('{degC}', degC)
-//       data = data.replace('{weatherEmoji}', emojis[icon])
-//       data = data.replace('{psTime}', psTime)
-//       data = data.replace('{todayDay}', todayDay)
-  
-//       data = fs.writeFile('chat.svg', data, (err) => {
-//         if (err) {
-//           console.error(err)
-//           return
-//         }
-//       })
-//     })
-//   })
+  })
 
 // const locationKey = '18363_PC'
 // let url = `forecasts/v1/daily/1day/${locationKey}?apikey=${WEATHER_API_KEY}`
