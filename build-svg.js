@@ -66,16 +66,16 @@ fetch(url)
         })
     
         data = data.replace('{degF}', degF)
-        data = data.replace('{degC}', degC)
+        data = data.replace('{degC}', 100)
         data = data.replace('{weatherEmoji}', emojis[icon])
         data = data.replace('{psTime}', psTime)
         data = data.replace('{todayDay}', todayDay)
     
         data = fs.writeFile('chat.svg', data, (err) => {
-        if (err) {
-        console.error(err)
-        return
-        }
+          if (err) {
+            console.error(err)
+            return
+          }
         })
     })
   })
