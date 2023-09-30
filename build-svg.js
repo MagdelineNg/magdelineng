@@ -1,4 +1,4 @@
-const WEATHER_API_KEY = process.env.WEATHER_API_KEY
+const WEATHER_API_KEY = '333c47b37739c5e3a453a60590473cf0'
 
 let fs = require('fs')
 // let got = require('got')
@@ -35,7 +35,7 @@ function convertTZ(date, tzString) {
 let lat = '1.321'
 let lon = '103.8198'
 let lang = 'en';
-let units = 'metric';
+let units = 'imperial';
 let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=${units}&lang=${lang}`;
 
 //fetch the weather
@@ -65,18 +65,18 @@ fetch(url)
         addSuffix: false,
         })
     
-        data = data.replace('{degF}', degF)
-        data = data.replace('{degC}', degC)
-        data = data.replace('{weatherEmoji}', emojis[icon])
-        data = data.replace('{psTime}', psTime)
-        data = data.replace('{todayDay}', todayDay)
+        // data = data.replace('{degF}', degF)
+        // data = data.replace('{degC}', degC)
+        // data = data.replace('{weatherEmoji}', emojis[icon])
+        // data = data.replace('{psTime}', psTime)
+        // data = data.replace('{todayDay}', todayDay)
     
-        data = fs.writeFile('chat.svg', data, (err) => {
-          if (err) {
-            console.error(err)
-            return
-          }
-        })
+        // fs.writeFile('chat.svg', data, (err) => {
+        //   if (err) {
+        //     console.error(err)
+        //     return
+        //   }
+        // })
     })
   })
     .catch(console.err);
