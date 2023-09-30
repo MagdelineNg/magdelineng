@@ -228,7 +228,7 @@
 
   <!-- Hi, I'm Magdeline Ng -->
   <g transform="translate(10, 0)" class="msg-1 bubble">
-    <rect width="159" height="42" rx="18.0355" />
+    <rect width="165" height="42" rx="18.0355" />
     <text x="15" y="27">Hi, I'm Magdeline Ng</text>
   </g>
 
@@ -278,8 +278,8 @@
   <!-- Work ... -->
   <g transform="translate(10, 120)" class="msg-3">
     <rect width="470" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">I’m a Final Year student studying Computer Science and Business,</text>
-    <text x="15" y="50">and I'm currently exploring Web Development and Cloud</text>
+    <text x="15" y="27">I’m a Final Year student studying Computer Science </text>
+    <text x="15" y="50">and Business at NTU
   </g>
 
   <!-- typing 4 -->
@@ -298,18 +298,40 @@
       <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
     </circle>
 
+  <!-- Exploring ... -->
+  <g transform="translate(10, 120)" class="msg-3">
+    <rect width="300" height="66.1302" rx="18.0355" class="bubble" />
+    <text x="15" y="27">I'm currently exploring Web Development and Cloud~</text>
+    <text x="15" y="50">and Business at NTU
+  </g>
+  <!-- typing 5 -->
+  <g transform="translate(10, 120)" class="typing-3">
+  <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
+  <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
+  <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
+
+    <circle cx="27.4778" cy="20.9773" r="5.02275" fill="#999999">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="42.8411" cy="20.9773" r="5.02275" fill="#999999">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="58.2054" cy="20.9773" r="5.02275" fill="#999999">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.4s" repeatCount="indefinite" />
+    </circle>
+
   </g>
 
   <!-- LinkedIn -->
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="540" height="42" rx="18.0355" class="bubble" />
+    <rect width="470" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
       Find me on
       <a xlink:href="https://www.linkedin.com/in/magdeline-ng/">https://www.linkedin.com/in/magdeline-ng/</a>
     </text>
   </g>
 
-  <!-- typing 5 -->
+  <!-- typing 6 -->
   <g transform="translate(10, 240)" class="typing-5">
   <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
   <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
