@@ -269,7 +269,7 @@
 
   <!-- Hi, I'm Magdeline Ng -->
   <g transform="translate(10, 0)" class="msg-1 bubble">
-    <rect width="185" height="42" rx="18.0355" />
+    <rect width="190" height="42" rx="18.0355" />
     <text x="15" y="27">Hi, I'm Magdeline Ng</text>
   </g>
 
@@ -341,12 +341,12 @@
 
   <!-- Exploring ... -->
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="470" height="66.1302" rx="18.0355" class="bubble" />
+    <rect width="470" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">I'm currently exploring Web Development and Cloud~</text>
   </g>
 
   <!-- typing 5 -->
-  <g transform="translate(10, 276)" class="typing-5">
+  <g transform="translate(10, 260)" class="typing-5">
     <rect x="8.27246" width="69.7276" height="42" rx="20.9774" class="bubble" />
     <circle cx="13.591" cy="33.091" r="7.68185" class="bubble" />
     <circle cx="3.54547" cy="41.9547" r="3.54547" class="bubble" />
@@ -364,7 +364,7 @@
   </g>
 
   <!-- LinkedIn -->
-  <g transform="translate(10, 276)" class="msg-5">
+  <g transform="translate(10, 260)" class="msg-5">
     <rect width="470" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
       Find me on
