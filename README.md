@@ -1,2 +1,2 @@
-![message_svg]( https://github.com/MagdelineNg/MagdelineNg/blob/master/chat.svg )
+![message_svg]( https://github.com/MagdelineNg/MagdelineNg/blob/main/chat.svg)
 
