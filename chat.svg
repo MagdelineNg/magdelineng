@@ -277,8 +277,8 @@
 
   <!-- Work ... -->
   <g transform="translate(10, 120)" class="msg-3">
-    <rect width="459" height="66.1302" rx="18.0355" class="bubble" />
-    <text x="15" y="27">I’m a Final Year undergraduate studying Computer Science and Business at NTU,</text>
+    <rect width="470" height="66.1302" rx="18.0355" class="bubble" />
+    <text x="15" y="27">I’m a Final Year student studying Computer Science and Business,</text>
     <text x="15" y="50">and I'm currently exploring Web Development and Cloud</text>
   </g>
 
@@ -302,7 +302,7 @@
 
   <!-- LinkedIn -->
   <g transform="translate(10, 192)" class="msg-4">
-    <rect width="415" height="42" rx="18.0355" class="bubble" />
+    <rect width="540" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="27">
       Find me on
       <a xlink:href="https://www.linkedin.com/in/magdeline-ng/">https://www.linkedin.com/in/magdeline-ng/</a>
@@ -329,7 +329,7 @@
 
   <!-- Thanks -->
   <g transform="translate(10, 240)" class="msg-5">
-    <rect width="255" height="66.13" rx="18.0355" class="bubble" />
+    <rect width="255" height="42" rx="18.0355" class="bubble" />
     <text x="15" y="47">Have a great Friday! <tspan class="emoji">👋</tspan></text>
   </g>
 </svg>

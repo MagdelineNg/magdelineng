@@ -32,15 +32,6 @@ function convertTZ(date, tzString) {
     return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
 }
 
-// const today = new Date()
-const today = convertTZ(new Date(), "Asia/Seoul");
-const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
-
-
-const psTime = formatDistance(new Date(2020, 12, 14), today, {
-  addSuffix: false,
-})
-
 let lat = '1.321'
 let lon = '103.8198'
 let lang = 'en';
@@ -65,6 +56,14 @@ fetch(url)
         console.error(error)
         return
         }
+
+        // const today = new Date()
+        const today = convertTZ(new Date(), "Asia/Singapore");
+        const todayDay = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today);
+
+        const psTime = formatDistance(new Date(2020, 12, 14), today, {
+        addSuffix: false,
+        })
     
         data = data.replace('{degF}', degF)
         data = data.replace('{degC}', degC)
